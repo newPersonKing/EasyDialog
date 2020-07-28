@@ -1,35 +1,10 @@
-# EasyDialog
-## A lightweight, flexible tip dialog in Android
 
-Demo can be download in GooglePlay
-
-
-<a href="https://play.google.com/store/apps/details?id=com.michael.easydialogdemo">
-  <img alt="Android app on Google Play"
-       src="google-play-badge.png" />
-</a>
 
 
 ![](demo.gif)
 
 
 
-A lightweight, flexible tip dialog in Android.You can custom the dialog style easily，set the TipView location, background color,animations,just only one line code!!!
-This Project and Demo is open source in github.
-
-###Special Thanks<br/>
-Feature "Added left and right gravity" was contributed by [akihiro0228](https://github.com/akihiro0228)
-
-Issue "The triangle's right margin is not suitable on low density screens" was contributed by [vigilancer](https://github.com/vigilancer)
-
-
-## How to use
-
-```groovy
-dependencies {
-  compile 'com.github.michaelye.easydialog:easydialog:1.4'
-}
-```
 
 <br/>
 
@@ -51,6 +26,21 @@ dependencies {
         .setMarginLeftAndRight(24, 24)
         .setOutsideColor(MainActivity.this.getResources().getColor(R.color.outside_color_trans))
         .show();
+```
+
+```java
+    customDialog = new CustomDialog()
+                        .setLayoutResourceId(R.layout.layout_tip_content_horizontal)
+                        .setBackgroundColor(MainActivity.this.getResources().getColor(R.color.background_color_blue))
+                        .setLocationByAttachedView(btnMiddleTop)
+                        .setShowAniamtion("translationY", -800, 100, -50, 50, 0)
+                        .setShowAniamtion("scaleX",0.5f,1f)
+                        .setDismissAnimation("translationY",0, -800)
+                        .setGravity(EasyDialog.GRAVITY_TOP)
+                        .setTouchOutsideDismiss(true)
+                        .setOutsideColor(MainActivity.this.getResources().getColor(R.color.transparent_background));
+                        
+                        customDialog.show(getFragmentManager(),"");
 ```
 
 ## License
