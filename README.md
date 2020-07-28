@@ -1,13 +1,6 @@
 
-
-
-![](demo.gif)
-
-
-
-
 <br/>
-
+原有版本
 ```java
      View view = this.getLayoutInflater().inflate(R.layout.layout_tip_content_horizontal, null);
      new EasyDialog(MainActivity.this)
@@ -27,7 +20,7 @@
         .setOutsideColor(MainActivity.this.getResources().getColor(R.color.outside_color_trans))
         .show();
 ```
-
+现有版本
 ```java
     customDialog = new CustomDialog()
                         .setLayoutResourceId(R.layout.layout_tip_content_horizontal)
