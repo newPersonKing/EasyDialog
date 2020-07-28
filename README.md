@@ -1,7 +1,8 @@
 
 <br/>
-原有版本
+
 ```java
+原有版本
      View view = this.getLayoutInflater().inflate(R.layout.layout_tip_content_horizontal, null);
      new EasyDialog(MainActivity.this)
      // .setLayoutResourceId(R.layout.layout_tip_content_horizontal)//layout resource id
@@ -20,8 +21,9 @@
         .setOutsideColor(MainActivity.this.getResources().getColor(R.color.outside_color_trans))
         .show();
 ```
-现有版本
+
 ```java
+现有版本
     customDialog = new CustomDialog()
                         .setLayoutResourceId(R.layout.layout_tip_content_horizontal)
                         .setBackgroundColor(MainActivity.this.getResources().getColor(R.color.background_color_blue))
